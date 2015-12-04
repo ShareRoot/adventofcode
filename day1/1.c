@@ -5,7 +5,7 @@ int main(int argc, char **argv)
 	char *ptr;
 	int total;
 	// Instructions are: ( add one, ) subtract one
-	for(ptr = ")", total = 0; *ptr; total -= *ptr + (*ptr % 2) - ')', ++ptr) {
+	for(ptr = INSTRUCTIONS, total = 0; *ptr; total -= *ptr + (*ptr % 2) - ')', ++ptr) {
 		if(total == -1)
 			printf("Basement step: %ld\n", (ptr - INSTRUCTIONS));
 	}
